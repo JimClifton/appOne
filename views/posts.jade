@@ -1,0 +1,9 @@
+extends layout
+
+block content
+	h1 List of posts
+
+	ul(class="list-group")
+		each item in items
+			li(class="list-group-item")
+				a(href="/posts/#{item._id}") #{item.title}

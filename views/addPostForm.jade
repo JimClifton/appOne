@@ -1,0 +1,14 @@
+extends layout
+
+block content
+	h1 Add Post
+
+	form(action="/addpost", method="post")
+		div(class="form-group")
+			label(for="title") Title
+			input(type='text', class="form-control", id='title', name="title", value='')
+		div(class="form-group")
+			label(for="content") Content
+			textarea(type='text', rows="6", class="form-control", id='content', name="content", value='')
+		div(class="form-group")
+			button(type="submit", class="btn btn-primary") Add

@@ -1,0 +1,14 @@
+extends layout
+
+block content
+	h1 #{post.title}
+
+	div(class="panel panel-default")
+		div(class="panel-heading")
+			h3(class="panel-title") #{post.title}
+		div(class="panel-body")
+			p #{post.content}
+
+	a(href="/posts/update/#{post._id}" class="btn btn-default") Update
+	&nbsp;
+	button(id="delete" class="btn btn-danger" value="#{post._id}") Delete

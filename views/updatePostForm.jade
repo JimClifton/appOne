@@ -1,0 +1,13 @@
+extends layout
+
+block content
+	h1 Editing - #{post.title}
+
+	div(class="form-group")
+		label(for="title") Title
+		input(type='text', class="form-control", id='title', name="title", value='#{post.title}')
+	div(class="form-group")
+		label(for="content") Content
+		textarea(type='text', rows="6", class="form-control", id='content', name="content") #{post.content}
+	div(class="form-group")
+		button(id="update" class="btn btn-primary" value="#{post._id}") Save

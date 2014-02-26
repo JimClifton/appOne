@@ -1,0 +1,27 @@
+doctype 5
+html
+	head
+		title= title
+		link(rel='stylesheet', href='/stylesheets/style.css')
+		link(rel='stylesheet', href='/bootstrap/css/bootstrap.css')
+		script(src="/javascripts/jquery.min.js")
+		script(src="/bootstrap/js/bootstrap.min.js")
+		script(src="/javascripts/scripts.js")
+
+	body
+		nav(class="navbar navbar-inverse")
+			div(class="navbar-inner")
+				ul(class="nav navbar-nav")
+					li
+						a(href="/posts") View posts
+
+					li
+						a(href="/addpost") Add a post
+
+				ul(class="nav navbar-nav navbar-right")
+					li
+						a(href="/login") Login
+					li
+						a(href="/logout") Logout
+
+		block content
